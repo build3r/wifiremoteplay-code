@@ -1,0 +1,327 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>Wifi Remote Play
+</title>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+<!-- Flattr -->
+<script type="text/javascript">
+/* <![CDATA[ */
+    (function() {
+        var s = document.createElement('script'), t = document.getElementsByTagName('script')[0];
+        s.type = 'text/javascript';
+        s.async = true;
+        s.src = 'http://api.flattr.com/js/0.6/load.js?mode=auto';
+        t.parentNode.insertBefore(s, t);
+    })();
+/* ]]> */</script>
+
+<!-- Google Analytics -->
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-38364448-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+</head>
+
+<body>
+
+<hr>
+<p><center><h2>Wifi Remote Play</h2></center></p>
+<hr>
+
+<p>Wifi Remote Play is a free Open Source remote control app for Android and
+Symbian smartphones/tablets, allowing you to control
+<a href="http://mpc-hc.sourceforge.net/">Media Player Classic</a> (MPC) or
+<a href="http://www.videolan.org/vlc/">VideoLan Client</a> (VLC) over a wireless network. Please
+see Instructions below for details on setting it up to work.</p>
+
+<p>This software is completely free - no ads, or having to pay for extra
+features, unlike many competing players!</p>
+
+<p><b>Nokia Symbian</b>: <a href="http://store.ovi.com/content/247839">Download free from the Nokia Store!</a> - Downloaded over 2 million times since 25 January 2012!</p>
+
+<p><b>Android</b>: <a href="https://play.google.com/store/apps/details?id=net.sourceforge.wifiremoteplay">Download free from Google Play!</a></p>
+
+<p>For Kindle Fire users note that you cannot access Google Play, and
+Wifi Remote Play will not be available from the Amazon store (this would cost me
+$99 a year). It is possible to transfer the install application files
+<a href="http://www.ubergizmo.com/2011/11/kindle-fire-sideload/">via another
+Android device and PC</a>.</p>
+
+<!--<p><b>For Nokia/Symbian phones - if you get "Installation failed", this is due to a Nokia Store fault, and not a problem with my app (they uploaded an incorrectly packaged file). I have notified Nokia of the problem. As a workaround, please try first installing my app Livejournal Qt - this will install the necessary libraries, so that installing Wifi Remote Play should then work (it's okay to then remove Livejournal Qt afterwards). Please don't give me bad 1 star reviews just because of a problem caused by Nokia :)</b></p>-->
+
+<a href="wifiremoteplay_ss1.png"><img align="right" src="wifiremoteplay_ss1.png" title="Screenshot" width="320" height="180"></a>
+
+<p>Wifi Remote Play is completely free, however if you wish you can show your appreciation and support future development by donating! This can be
+done through Paypal below (Paypal account not required, supports debit or credit card) or Flattr. Thanks!</p>
+
+<form action="https://www.paypal.com/cgi-bin/webscr" method="post">
+<input type="hidden" name="cmd" value="_s-xclick">
+<input type="hidden" name="encrypted" value="-----BEGIN PKCS7-----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-----END PKCS7-----
+">
+<input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+<img alt="" border="0" src="https://www.paypalobjects.com/en_GB/i/scr/pixel.gif" width="1" height="1">
+</form>
+
+<a class="FlattrButton" style="display:none;" href="http://homepage.ntlworld.com/mark.harman/comp_wifiremoteplay.html"></a>
+<noscript><a href="http://flattr.com/thing/1190998/Wifi-Remote-Play" target="_blank">
+<img src="http://api.flattr.com/button/flattr-badge-large.png" alt="Flattr this" title="Flattr this" border="0" /></a></noscript>
+
+<p>Also see my <a href="http://sourceforge.net/donate/?user_id=439017">Sourceforge donation page</a>. You can also donate
+via <a href="http://www.bitcoin.org/">Bitcoin</a>. My Bitcoin address is: <b>1LKCFto9SQGqtcvqZxHkqDPqNjSnfMmsow</b>.</p>
+
+<p><b>Features</b><ul>
+<li>Play, pause, skip forwards/backwards through a track, jump to any point in the track, and jump to previous/next track.</li>
+<li>Status shows current track, position, and length.</li>
+<li>Volume control, and mute.</li>
+<li>File browser to select new tracks or playlists (Media Player Classic only).</li>
+<li>Toggle between windowed and full screen mode.</li>
+<li>Controls for DVD interface (Media Player Classic only).</li>
+</ul></p>
+
+<p>
+<a href="http://sourceforge.net/p/wifiremoteplay/blog/">Wifi Remote Play Blog</a> ~
+<a href="http://sourceforge.net/p/wifiremoteplay/discussion/">Discussion Forums</a> ~
+<a href="https://sourceforge.net/p/wifiremoteplay/code/">Code Repository (Git)</a>
+</p>
+
+<!--<p>To download, use your phone's web browser to go to:
+<a href="http://markh.webuda.com/wifiremoteplay_installer.sis">http://markh.webuda.com/wifiremoteplay_installer.sis</a>
+(if you're browsing on your phone, just click on the link) (or instead, you can download the
+wifiremoteplay_installer.sis file to your PC, and doubleclick on the file to install to the phone over USB).</p>-->
+
+<!--<p>The Symbian installer file is at <a href="wifiremoteplay_installer.sis">wifiremoteplay_installer.sis</a>. You can either download to your PC, and doubleclick on the file to install to the phone over USB; or download on your phone, you'll then have to go to File Manager (Options->Go to File Manager; or select File Manager from the Applications menu), go to "E:", "download", then double tap on wifiremoteplay_installer.sis. (Unfortunately installing from the phone's web browser directly isn't supported, because Virgin Media's web hosting is too crap to support it, so the Symbian installer files get marked as plain text...)
+</p>-->
+
+<!--<p>Note that this application is unsigned. To install,
+you have to change the settings on your phone to allow all applications rather than just signed applications
+(e.g., on the Nokia 5800, go to Settings->Application mgr.->Installation sett., and set Software installation
+from "Signed only" to "All"). (Note that you'll still be told when installing an unsigned app, so changing this
+setting won't install anything that you don't want.)</p>-->
+
+<p><b>System requirements</b></p>
+
+<p>For Nokia/Symbian, this should work on any device running Symbian S60 5th
+edition (Symbian ^1) or better. For Android, this requires Android 2.3.3 or
+better. I've tested this successfully on the Samsung Galaxy Nexus, running
+Android 4.2.2.</p>
+
+<p>For Android, this requires installing the app
+<a href="https://play.google.com/store/apps/details?id=org.kde.necessitas.ministro">Ministro</a>, which you should be prompted to do when you first run
+Wifi Remote Play (if it's not already installed). Ministro manages the required Qt libraries on Android. These will be
+downloaded if required when you first run Wifi Remote Play. If you get an error message such as "Ministro can not
+satisfy your application dependencies", please ensure you have enough storage space (the libraries can take up to around
+25MB).</p>
+
+<p>I've tested it with Media Player Classic version 1.6.8.7417, and
+VLC version 2.0.7. Note that in
+old versions of Media Player Classic, the Previous/Next Track buttons won't
+work correctly - please upgrade to the latest version of MPC if you have this
+problem.</p>
+
+<!--<p><b>Installation notes</b>
+
+<ul>
+<li>This application is unsigned, so you'll have to change the settings to allow all applications rather than just
+unsigned applications (see above). You'll also get a message about it being unsigned when installing.</li>
+<li>An Internet connection is required when installing to download additional Qt for Symbian libraries, if not
+aleady installed on your phone (Qt is now the official development environment for Symbian, but the libraries are
+not yet shipped on all phones). Note that this may be several MBs (up to 12MB) in size.</li>
+<li>You'll have to press "Ok"/"Continue" about five times when installing - this is due to Nokia's "Smart
+Installer" (this should hopefully get better in future!), and because of it being unsigned.</li>
+</ul></p>-->
+
+<p><a name="#instructions"><b>Instructions</b></p>
+
+<p>To set up <b>Media Player Classic</b>, go to menu View/Options, then under
+Player/Web Interface, tick "Listen on port". (Also explained in the
+<a href="http://mpc-hc.sourceforge.net/remote-control.html">instructions for
+the Android MPC app</a>.)</p>
+
+<p>To set up <b>VLC</b>, go to menu Tools/Preferences, then select "All" under
+"Show settings" (bottom left). Then go to Interface/Main interfaces, and tick
+"Web" (or "HTTP remote control interface" in versions prior to 2.0.0), then restart
+VLC.</p>
+
+<p><i>Note that whilst Wifi Remote Play works with both Media Player Classic
+and VLC, there are more features available when used with Media Player Classic
+(browser to select new files, and DVD control).</i></p>
+
+<p>When Media Player Classic or VLC is running, start Wifi Remote Play. The
+first time you run it, you'll be asked whether you are using it with Media
+Player Classic or VLC (n.b., if upgrading from Wifi Remote Play 1.4 or earlier,
+it will default to using MPC - use the "Choose player" menu option to change it).
+You'll then be asked to enter the <b>IP Address</b> of the machine running Media
+Player Classic / VLC. You can find this out by doing
+the following on the PC running Media Player Classic / VLC:<ol>
+<li>Go to Start->Run (on Windows XP, click Run from the start menu; on Windows 7, type "Run", or go to All Programs->Accessories->Run). Or simply press the Windows key + "R" together.</li>
+<li>Type cmd [and press enter].</li>
+<li>Type ipconfig [and press enter].</li>
+<li>You'll see a load of info - you're looking for "IPv4 Address" (usually listed under a category talking about LAN or Wireless adapter). It will be a string of 4 numbers separated by dots (e.g.,: 192.168.1.1). You should type this into Wifi Remote Play for "IP Address" (including the dots).</li>
+<li>For more advice, see <a href="http://www.wikihow.com/Find-the-IP-Address-of-Your-PC">here</a> or <a href="http://www.banamalon.net/android/wiki/index.php?title=IP_address">here</a>.</li>
+<li>Note that web pages that show you your IP address may not show you the address that you actually need (if you access the Internet through a router, as is common for wireless modems these days).</li>
+<li>Note that although Wifi Remote Play saves the IP Address, if your PC's IP Address changes, you'll need to update it in Wifi Remote Play (press "Options",
+then "Settings"). Note that some routers/modems may mean the IP Address changes everytime your PC is rebooted, but there is usually an option to reserve an IP
+Address or keep them fixed - please consult your router or modem manual for information.</li>
+<li>If things aren't working, make sure that Media Player Classic or VLC isn't being blocked by any Firewall software. One thing to try is to (after closing the
+settings window) click "Options" then "Web interface". This opens up the player's web interface in the phone's web browser. If this doesn't appear,
+or it doesn't work, then there's something wrong with getting a connection to your PC, and not with Wifi Remote Play :) To be sure, you can also try loading the
+page yourself in the phone's browser, going to the URL: http://[IP-Address]]:13579/ for MPC, or http://[IP-Address]]:8080/ for VLC (e.g., <a href="http://192.168.1.1:13579/">http://192.168.1.1:13579/</a> ).</li>
+<li>Also if you're using VLC, it <b>may be required to edit the .hosts file</b>:
+    <ul>
+    <li>On Windows: the file is c:\Program Files\VideoLAN\VLC\http\.hosts or c:\Program Files\VideoLAN\VLC\lua\http\.hosts (or if you're on 64 bit Windows, it might be c:\Program Files (x86)\...).
+    On Windows Vista onwards, you'll need admin permissions to edit the file. One way is to copy/paste the file to the desktop, edit it there, then cut/paste it back into the VLC folder.</li>
+    <li>On Linux: the file is /usr/share/vlc/http/.hosts or /usr/share/vlc/lua/http/.hosts .</li>
+    <li>On Mac OS X: the file is VLC.app/Contents/MacOS/share/http/.hosts or VLC.app/Contents/MacOS/share/lua/http/.hosts .
+    <li>To edit, find the bit after "# private addresses", and uncomment (remove the #) of the line relevant for your subnet. Most the time, it will work to remove the "#" character from line 192.168.0.0/16 or 192.168.1.0/16.
+    You may need to restart VLC after changing the .hosts file. If you can't get any of this working, I recommend using Media Player Classic instead of VLC, as it's easier to set up.</li>
+    </ul>
+</li>
+</ol>
+<b>Port</b> should be left at the default, unless you've changed it in Media Player Classic / VLC. Click
+Okay, and you'll be presented with an interface:<ul>
+<li><b>&lt;&lt;</b> - Previous track.</li>
+<li><b>&lt;</b> - Skip backwards 5 seconds.</li>
+<li><b>Play/Pause</b> - Toggle between playing and paused.</li>
+<li><b>&gt;</b> - Skip forwards 5 seconds.</li>
+<li><b>&gt;&gt;</b> - Next track.</li>
+<li><b>-/+</b> - Change volume.</li>
+<li><b>mute</b> - Mute/unmute volume. Note that on VLC, this only mutes volume; use the + to increase the volume again.</li>
+<li><b>DVD</b> - (Media Player Classic only.) Opens up the DVD interface, allowing you to control DVD menu screens.</li>
+</ul></p>
+
+<p>At the top of the screen will be displayed the name of the current track, the current position, and total
+length. The slider shows the current position, and allows you to jump to any position in the track. The user
+interface displays best when the phone is held in landscape mode (this is especially true for lower resolution
+Android devices).</p>
+
+<p>Note that the displayed current time is an estimate, updated every 5 seconds, so it won't always be exactly
+accurate (there also seems to be an issue in Media Player Classic which means the status of playing or paused isn't returned correctly in full screen mode, meaning the app has to estimate this). Similarly, when changing tracks it may
+take a few seconds for the status to update.</p>
+
+<p>The following menu options are available (on Symbian press "Option"; on Android, press your device's menu button):<ul>
+<li><b>Settings</b> - Open the settings window, to change the IP address or port.</li>
+<li><b>Toggle full screen</b> - Switch between windowed and full screen mode.</li>
+<li><b>Open file browser</b> - (Media Player Classic only.) Allows you to browse the computer's hard disk and select a file to open. Click
+"Close" to go back to the main interface (whether or not you've selected a new file). Note that there is a known issue in that some files with non-ASCII unicode characters won't load (seems to be a problem with the MPC web interface, as far as I can tell).</li>
+<li><b>Choose player</b> - Choose between using Media Player Classic or VLC.</li>
+<li><b>Online help</b> - Loads this web page in the phone's browser.</li>
+<li><b>Web interface</b> - Opens up the Media Player Classic or VLC web interface. This gives the full range of options (though doesn't fit so well on a phone... but
+still useful for testing, or for features not yet supported natively in Wifi Remote Play).</li>
+<li><b>About</b> - Displays basic information about the program.</li>
+</ul></p>
+
+<p>Network activity is suspended when the application isn't active, or the phone screen is blanked, in an attempt
+to save on battery life :)</p>
+
+<!--<p>On Android, the screen display is kept on when Wifi Remote Play is running as the foreground app (if
+you want to switch off the display, do so on your phone manually).</p>-->
+
+<p><b>History</b></p><pre>
+
+Version 1.9 (2013/06/28) (Only released for Android)
+
+FIXED   Menu wasn't available on "tablet" Android displays in v1.8.
+
+Version 1.8 (2013/06/26) (Only released for Android)
+
+FIXED   Screen on Android wasn't being kept awake (bug in v1.7).
+FIXED   Problem on Android with user interface of DVD window when in portrait
+        mode.
+UPDATED Android "back" button now works properly.
+UPDATED More efficient battery usage when idle now implemented for Android as
+        well as Symbian.
+UPDATED Android version now supports large "tablet" displays in Google Play.
+
+Version 1.7 (2012/10/26)
+
+FIXED   Name string wasn't reported properly in latest versions of MPC (e.g.,
+        version 1.6.3.5818). Now fixed to work with both new and old versions.
+UPDATED Android version now has proper Android UI look-and-feel.
+UPDATED Android version now compiled with Necessitas Alpha 4.
+
+Version 1.6 (2012/04/01)
+
+FIXED   Memory leak when switching between players.
+ADDED   Ported to Android.
+UPDATED Improved method to show/modify progress - using progress bar instead of
+        slider. Also displays percentage of progress.
+UPDATED File browser now scrolls with touch-swipe.
+UPDATED Added zoom in/out buttons for file browser.
+UPDATED Improved help text for settings window (gives an example of an IP
+        address).
+
+Version 1.5 (2012/02/24)
+
+ADDED   Support for VLC (DVD interface and file browser not supported for
+        VLC).
+INFO    Version 1.5 has a new "UID" value, which means if upgrading from
+        earlier versions, the old version will not be uninstalled - please
+        uninstall the old version manually. Settings data should still be
+        preserved, however. This is due to a fault by Nokia Store, and not
+        me!
+
+Version 1.4 (2012/02/04)
+
+FIXED   Displayed track name now works properly with Unicode characters.
+FIXED   Annoying flash of phone's home screen when opening/closing the
+        sub-windows, in some circumstances.
+UPDATED Updated Previous/Next Track to work with latest MPC (if they now
+        don't work properly, please upgrade to latest MPC version).
+ADDED   Slider to allow easy jumping to any part of the track.
+ADDED   Option to mute/unmute volume.
+ADDED   Controls for DVD interface.
+ADDED   Option to open MPC Web Interface.
+
+Version 1.3 (2012/01/31)
+
+FIXED   Track name wasn't showing in latest version of Media Player Classic.
+FIXED   \' characters now correctly converted to ' in track name.
+FIXED   Online help didn't work if browser already open.
+UPDATED Settings window now has help information, and link to this web page.
+
+Version 1.2 (2012/01/17)
+
+UPDATED More efficient battery usage when idle (timers disabled).
+
+Version 1.1 (2011/12/21)
+
+FIXED   Now using properly allocated UIDs on Symbian, not development ones.
+FIXED   Don't show annoying "Bad file descriptor" error message.
+UPDATED Error window now gives number of error code.
+
+Version 1.0 (2010/07/23)
+
+First release.
+</pre>
+
+<p><b>Source code</b></p>
+
+<p>The <a href="http://sourceforge.net/projects/wifiremoteplay/files/wifiremoteplaysrc.zip/download">source code</a> is available, released under the <a href="http://www.gnu.org/copyleft/gpl.html">GPL v3 or later</a>.
+
+<p><b>Contacting me (bugs etc)</b></p>
+
+<p>Please contact me at <b>mark dot harman at ntlworld dot com</b> . Also let me know if you're interested in a
+port for Maemo (for Nokia N900) or Meego (for Nokia N9), as I can compile it for those platforms too, though I don't have one of those smartphones to test it on.</p>
+
+<p><b>Additional credits</b></p>
+
+<p>The application icon is derived from a public domain image,
+<a href="http://commons.wikimedia.org/wiki/File:Wikipedia_images_015.jpg">http://commons.wikimedia.org/wiki/File:Wikipedia_images_015.jpg</a>.</p>
+
+<hr>
+<p><a href="http://sourceforge.net/p/wifiremoteplay/">Wifi Remote Play on Sourceforge.</a></p>
+<p><a href="http://homepage.ntlworld.com/mark.harman/software.html">More software.</a></p>
+
+</body>
+</html>

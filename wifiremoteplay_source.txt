@@ -1,0 +1,33 @@
+Symbian
+=======
+
+See http://qt.nokia.com/ for the official Qt SDK. The Symbian release is built using Qt 4.7.3, to ensure compatibility with S60 5th edition (Symbian^1) - 4.7.4 is only compatible with Symbian^3 onwards.
+
+Important: Each Symbian application should have a unique UID. If you wish to distribute your own binaries made with this source, please obtain your own UID, and edit the wifiremoteplay.pro file with it. In particular, the one I use for distribution is provided by Nokia only for use on the Ovi store, and must not be used elsewhere. You can obtain your own UID for free from Symbian Signed ( https://www.symbiansigned.com ).
+
+Android
+=======
+
+For Android devices, use Qt for Android (Necessitas): http://sourceforge.net/p/necessitas/ . Note that this is an unofficial Qt port still in beta, but it works well enough for building Android applications and deploying to sites like Google Play.
+
+The Android release is built using Qt 4.8, for armv5 and armv7, using Android API 10.
+
+Source Control
+==============
+
+Since version 1.6, I've released the source online using Git, at https://sourceforge.net/p/wifiremoteplay/code . Note that I work with the auto crlf turned off (otherwise it converts all the Linux line endings into Windows format). If you want to work on the source, please check out the latest version from the repository.
+
+Licence
+=======
+
+This source is released under the GPL v3 or later.
+
+Please contact me if you have suggestions, bug fixes, ports to other platforms or whatever: mark dot harman at ntlworld dot com .
+
+Homepage: http://homepage.ntlworld.com/mark.harman/comp_wifiremoteplay.html
+
+Nokia store download: http://store.ovi.com/content/247839
+
+Google Play download: https://play.google.com/store/apps/details?id=net.sourceforge.wifiremoteplay
+
+Mark Harman 23 June 2013
